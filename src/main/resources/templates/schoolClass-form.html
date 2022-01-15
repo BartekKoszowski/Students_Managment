@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create new class</title>
+</head>
+<body>
+<nav th:replace="fragments :: navbar(title='main')"></nav>
+<form th:object="${schoolClass}" method="post">
+  <div class="mb-3 ms-3">
+    <label class="form-lable">Class name: <input class="form-control" type="text" th:field="*{name}"></label>
+  </div>
+  <div class="ms-3 ">
+    <button class="btn btn-primary" role="submit"> Class add</button>
+    <a th:href="@{/schoolClass-list}" class="btn btn-primary" role="submit"> Back </a>
+  </div>
+</form>
+</body>
+</html>

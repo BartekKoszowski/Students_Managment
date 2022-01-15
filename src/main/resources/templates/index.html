@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home Page</title>
+</head>
+<body>
+<nav th:replace="fragments :: navbar(title='main')"></nav>
+<div class="row ">
+  <h1>News</h1>
+  <div class="card" style="width: 18rem;">
+    <img src="https://www.zslbilgoraj.pl/wp-content/uploads/2021/03/xslider-szkola-1920x700.jpg.pagespeed.ic.xjJh1ofxe8.jpg" class="card-img-top" alt="school" width="200" height="200">
+    <div class="card-body">
+      <h5 class="card-title">Welcome</h5>
+      <p class="card-text">You can find here information about the site.</p>
+      <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Click" data-bs-content="You can use this app to view and update details such as your address, phone number and emergency contact. When was the last time you checked yours were up to date?">Click for more!</button>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img src="https://it.tcu.edu/wp-content/uploads/Need-Help-Support-2.png" class="card-img-top" alt="school" width="200" height="200">
+    <div class="card-body">
+      <h5 class="card-title">Help and support</h5>
+      <p class="card-text">If you would like more information or support, please contact with school admimnistration will be happy to help.</p>
+      <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Click for help." data-bs-content="">Click for help.</button>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img src="https://www.i-nucleus.com/wp-content/uploads/2020/07/student-blue.png" class="card-img-top" alt="school" width="200" height="200">
+    <div class="card-body">
+      <h5 class="card-title">Students managment</h5>
+      <p class="card-text">If you would like more information or support, please contact with school admimnistration will be happy to help.</p>
+      <a th:href="@{/test-view}" class="btn btn-danger" type="submit">Click.</a>
+</div>
+  </div>
+</div>
+</body>
+</html>
